@@ -1,0 +1,21 @@
+.text {
+  text-align: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.searchBar {
+  width: 80%;
+  margin: auto;
+}
+
+#classBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.items {
+  margin: 20px;
+}
