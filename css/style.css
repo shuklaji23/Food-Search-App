@@ -1,3 +1,19 @@
+.navButtons {
+  display: flex;
+}
+
+.categoryButton {
+  margin-right: 10px;
+}
+
+.clickable {
+  cursor: pointer;
+  padding: 10px;
+  /* background-color: lightblue; */
+  /* border: 1px solid blue; */
+  /* display: inline-block; */
+}
+
 .text {
   text-align: center;
   justify-content: center;
