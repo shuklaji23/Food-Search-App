@@ -55,7 +55,7 @@ function showData(data, type) {
     }
     const mealData = document.createElement("div");
     mealData.innerHTML = `
-    <div class="card items clickable" style="width: 18rem" onclick="createAndOpenNewPage()">
+    <div class="card items clickable" style="width: 18rem" onclick="goToNewPage(${id})">
         <img src="${image}" alt="${category}" />
         <div class="card-body">
             <p class="card-text">
@@ -68,16 +68,8 @@ function showData(data, type) {
   });
 }
 
-function createAndOpenNewPage(data) {
-  // window.location.href = "use.html";
-
-  var newPage = document.implementation.createHTMLDocument("New Page");
-  newPage.write(
-    '<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>New Page</title></head><body><h1>This is a new page!</h1><p>This page was created dynamically.</p></body></html>'
-  );
-  newPage.close();
-  var newPageURL = URL.createObjectURL(
-    new Blob([newPage.documentElement.outerHTML], { type: "text/html" })
-  );
-  window.open(newPageURL, "_blank");
+function goToNewPage(data) {
+  var url = "meal.html?data=" + encodeURIComponent(data);
+  // window.location.href = url;
+  window.open(url, "_blank");
 }
